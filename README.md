@@ -4,7 +4,7 @@ A hybrid AI application that predicts real estate prices using both **numerical 
 
 ## 📸 Application Demo
 
-Below is a screenshot of the application in action, accurately predicting a "Hard" difficulty problem.
+Below is a screenshot of the application in action, accurately predicting a "HousePrice" .
 
 ![HousePrice Application Screenshot](app_screenshot.png)
 
