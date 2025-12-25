@@ -2,6 +2,12 @@
 
 A hybrid AI application that predicts real estate prices using both **numerical data** (bedrooms, square footage, etc.) and **visual data** (house images). Built with Deep Learning (TensorFlow/Keras) and Streamlit.
 
+## 📸 Application Demo
+
+Below is a screenshot of the application in action, accurately predicting a "Hard" difficulty problem.
+
+![HousePrice Application Screenshot](app_screenshot.png)
+
 ## 🚀 Live Demo
 [Link to Live App](https://housepriceai-4wbwtj8prupxehk6d8tm6t.streamlit.app/)
 
