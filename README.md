@@ -1,27 +1,45 @@
 # 🏡 AI House Price Predictor
 
-A Multi-Modal Deep Learning application that predicts real estate prices by analyzing both **visual data** (satellite imagery) and **numerical data** (bedrooms, bathrooms, sqft) simultaneously.
+A hybrid AI application that predicts real estate prices using both **numerical data** (bedrooms, square footage, etc.) and **visual data** (house images). Built with Deep Learning (TensorFlow/Keras) and Streamlit.
 
-## 🚀 Features
-* **Multi-Modal Brain:** Uses a custom Neural Network that combines a CNN (for image processing) with a Dense Network (for statistics).
-* **Interactive UI:** Built with **Streamlit** for real-time predictions.
-* **High Accuracy:** Fine-tuned "V3" model achieves ~6% error margin on test data.
-* **Visual Analysis:** The AI actually "looks" at the house photo to judge value (e.g., luxury vs. simple structures).
+## 🚀 Live Demo
+[Link to Live App](https://housepriceai-4wbwtj8prupxehk6d8tm6t.streamlit.app/)
+
+## 🧠 How It Works
+This project uses a **Multi-Input Neural Network**:
+1.  **Visual Model (CNN):** Processes images of the house to extract visual features (condition, style, etc.).
+2.  **Numerical Model (Dense):** Processes structured data like bedrooms, bathrooms, and square footage.
+3.  **Fusion Layer:** Combines both inputs to output a precise price prediction.
 
 ## 🛠️ Tech Stack
-* **Python 3.10+**
+* **Python**
 * **TensorFlow / Keras** (Deep Learning)
-* **Streamlit** (Web Interface)
+* **Streamlit** (Web UI)
 * **Pandas & NumPy** (Data Processing)
-* **OpenCV & PIL** (Image Processing)
+* **OpenCV** (Image Processing)
 
 ## 📂 Project Structure
-```text
-HousePriceAI/
-├── app.py                   # The main Streamlit web application
-├── house_price_model_v3.h5  # The trained AI Brain (The Model)
-├── cleaned_dataset.csv      # Processed data for scaling
-├── sample_images/           # Test images for you to try
-│   ├── luxury_house.jpg
-│   └── small_house.jpg
-└── README.md                # This file
+    notebooks/          # Jupyter notebooks for training and experiments
+    sample_images/      # Images used for testing predictions
+    app.py              # Main Streamlit application
+    house_price_model_v3.h5  # The trained AI model
+    cleaned_dataset.csv      # Processed data used for training
+    requirements.txt    # List of dependencies
+
+## 💻 How to Run Locally
+
+1. **Clone the repository**
+    git clone https://github.com/sumitsolanki8055/HousePriceAI.git
+    cd HousePriceAI
+
+2. **Install dependencies**
+    pip install -r requirements.txt
+
+3. **Run the app**
+    streamlit run app.py
+
+## 📊 Dataset
+The model was trained on a real estate dataset containing housing features and corresponding images. The data was cleaned and preprocessed in the `notebooks/` directory.
+
+---
+*Created by Sumit Solanki*
