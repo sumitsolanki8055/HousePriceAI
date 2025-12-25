@@ -1,207 +1,70 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": 1,
-   "id": "74ebca15-d9f2-4eb4-acef-0e71ad059087",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "C:\\Users\\sumit\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\keras\\src\\export\\tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.\n",
-      "  if not hasattr(np, \"object\"):\n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "--- 📂 Loading Data ---\n",
-      "Loading 12892 images (this keeps the best ones)...\n",
-      "\n",
-      "--- 🧠 Loading house_price_model_v2.h5 ---\n",
-      "\n",
-      "--- 🎓 Fine-Tuning (Slow & Steady) ---\n",
-      "Epoch 1/15\n",
-      "\u001b[1m323/323\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m213s\u001b[0m 641ms/step - loss: 65651998720.0000 - mae: 145976.3750 - val_loss: 57624096768.0000 - val_mae: 131627.4844\n",
-      "Epoch 2/15\n",
-      "\u001b[1m323/323\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m200s\u001b[0m 618ms/step - loss: 63851315200.0000 - mae: 145229.0781 - val_loss: 56793411584.0000 - val_mae: 130552.7812\n",
-      "Epoch 3/15\n",
-      "\u001b[1m323/323\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m230s\u001b[0m 712ms/step - loss: 62434127872.0000 - mae: 144839.7031 - val_loss: 58562113536.0000 - val_mae: 145488.0938\n",
-      "Epoch 4/15\n",
-      "\u001b[1m323/323\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m231s\u001b[0m 717ms/step - loss: 61414768640.0000 - mae: 145242.8281 - val_loss: 57425211392.0000 - val_mae: 128790.7422\n",
-      "Epoch 5/15\n",
-      "\u001b[1m323/323\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m272s\u001b[0m 843ms/step - loss: 60010278912.0000 - mae: 145204.2656 - val_loss: 57254133760.0000 - val_mae: 145947.4531\n",
-      "Epoch 6/15\n",
-      "\u001b[1m323/323\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m272s\u001b[0m 843ms/step - loss: 61338443776.0000 - mae: 145646.9844 - val_loss: 54905167872.0000 - val_mae: 133366.0312\n",
-      "Epoch 7/15\n",
-      "\u001b[1m323/323\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m271s\u001b[0m 838ms/step - loss: 62407438336.0000 - mae: 145772.0625 - val_loss: 54566305792.0000 - val_mae: 127962.9844\n",
-      "Epoch 8/15\n",
-      "\u001b[1m323/323\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m269s\u001b[0m 832ms/step - loss: 61586161664.0000 - mae: 145499.7031 - val_loss: 57268080640.0000 - val_mae: 129894.6641\n",
-      "Epoch 9/15\n",
-      "\u001b[1m323/323\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m272s\u001b[0m 842ms/step - loss: 60770631680.0000 - mae: 145103.4375 - val_loss: 53534846976.0000 - val_mae: 131143.2500\n",
-      "Epoch 10/15\n",
-      "\u001b[1m323/323\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m277s\u001b[0m 857ms/step - loss: 59253469184.0000 - mae: 145572.0938 - val_loss: 54770810880.0000 - val_mae: 129418.3125\n",
-      "Epoch 11/15\n",
-      "\u001b[1m323/323\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m268s\u001b[0m 828ms/step - loss: 59303387136.0000 - mae: 145357.4531 - val_loss: 53896261632.0000 - val_mae: 136336.5156\n",
-      "Epoch 12/15\n",
-      "\u001b[1m323/323\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m266s\u001b[0m 823ms/step - loss: 58871685120.0000 - mae: 145405.3125 - val_loss: 53935075328.0000 - val_mae: 137445.7344\n",
-      "Epoch 13/15\n",
-      "\u001b[1m323/323\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m243s\u001b[0m 753ms/step - loss: 58014289920.0000 - mae: 145008.0938 - val_loss: 52604780544.0000 - val_mae: 131536.2969\n",
-      "Epoch 14/15\n",
-      "\u001b[1m323/323\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m221s\u001b[0m 685ms/step - loss: 57551040512.0000 - mae: 145306.2812 - val_loss: 75324268544.0000 - val_mae: 202320.8594\n",
-      "Epoch 15/15\n",
-      "\u001b[1m323/323\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m229s\u001b[0m 709ms/step - loss: 58386477056.0000 - mae: 145297.3594 - val_loss: 52475011072.0000 - val_mae: 135602.3750\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. \n"
-     ]
-    },
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "\n",
-      "✅ Saved smarter model to: house_price_model_v3.h5\n",
-      "📉 Final Validation Error (MSE): 52,475,011,072\n",
-      "root mean squared error approx: $229,074\n"
-     ]
-    }
-   ],
-   "source": [
-    "import pandas as pd\n",
-    "import numpy as np\n",
-    "import tensorflow as tf\n",
-    "import os\n",
-    "import cv2\n",
-    "from sklearn.model_selection import train_test_split\n",
-    "from sklearn.preprocessing import MinMaxScaler\n",
-    "\n",
-    "# ================= CONFIGURATION =================\n",
-    "# Load the V2 model you just made\n",
-    "OLD_MODEL = \"house_price_model_v2.h5\" \n",
-    "NEW_MODEL = \"house_price_model_v3.h5\" # We will save a better version\n",
-    "DATA_FILE = \"cleaned_dataset.csv\"\n",
-    "IMG_FOLDER = \"data/house_images\"\n",
-    "IMG_SIZE = 128\n",
-    "# =================================================\n",
-    "\n",
-    "def load_data():\n",
-    "    print(\"--- 📂 Loading Data ---\")\n",
-    "    df = pd.read_csv(DATA_FILE)\n",
-    "    \n",
-    "    # Filter: Only keep rows where image exists\n",
-    "    df['img_path'] = df['id'].apply(lambda x: os.path.join(IMG_FOLDER, f\"image_{x}.jpg\"))\n",
-    "    df = df[df['img_path'].apply(os.path.exists)]\n",
-    "    \n",
-    "    # 1. Process Images\n",
-    "    print(f\"Loading {len(df)} images (this keeps the best ones)...\")\n",
-    "    images = []\n",
-    "    for img_path in df['img_path']:\n",
-    "        img = cv2.imread(img_path)\n",
-    "        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)\n",
-    "        img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))\n",
-    "        images.append(img)\n",
-    "    \n",
-    "    X_img = np.array(images) / 255.0\n",
-    "    \n",
-    "    # 2. Process Stats (Lat/Long/Bed/Bath/etc)\n",
-    "    feature_cols = ['bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'lat', 'long']\n",
-    "    scaler = MinMaxScaler()\n",
-    "    X_stats = scaler.fit_transform(df[feature_cols].values)\n",
-    "    \n",
-    "    # 3. Process Prices\n",
-    "    y = df['price'].values\n",
-    "    \n",
-    "    return X_img, X_stats, y\n",
-    "\n",
-    "def main():\n",
-    "    # 1. Load Data\n",
-    "    X_img, X_stats, y = load_data()\n",
-    "    \n",
-    "    # Split Data\n",
-    "    Xi_train, Xi_test, Xs_train, Xs_test, y_train, y_test = train_test_split(\n",
-    "        X_img, X_stats, y, test_size=0.2, random_state=42\n",
-    "    )\n",
-    "\n",
-    "    # 2. Load the Old Brain\n",
-    "    print(f\"\\n--- 🧠 Loading {OLD_MODEL} ---\")\n",
-    "    model = tf.keras.models.load_model(OLD_MODEL, compile=False)\n",
-    "\n",
-    "    # 3. COMPILING WITH LOW LEARNING RATE (The Secret Sauce)\n",
-    "    # We use 0.0001 instead of 0.001 to make it \"Fine Tune\"\n",
-    "    optimizer = tf.keras.optimizers.Adam(learning_rate=0.0001)\n",
-    "    \n",
-    "    model.compile(\n",
-    "        optimizer=optimizer, \n",
-    "        loss='mse', \n",
-    "        metrics=['mae']\n",
-    "    )\n",
-    "\n",
-    "    # 4. Train Gently\n",
-    "    print(\"\\n--- 🎓 Fine-Tuning (Slow & Steady) ---\")\n",
-    "    history = model.fit(\n",
-    "        [Xi_train, Xs_train], y_train,\n",
-    "        validation_data=([Xi_test, Xs_test], y_test),\n",
-    "        epochs=15,           # Short run\n",
-    "        batch_size=32\n",
-    "    )\n",
-    "\n",
-    "    # 5. Save V3\n",
-    "    model.save(NEW_MODEL)\n",
-    "    print(f\"\\n✅ Saved smarter model to: {NEW_MODEL}\")\n",
-    "\n",
-    "    # Check improvement\n",
-    "    final_loss = history.history['val_loss'][-1]\n",
-    "    print(f\"📉 Final Validation Error (MSE): {int(final_loss):,}\")\n",
-    "    print(f\"root mean squared error approx: ${int(np.sqrt(final_loss)):,}\")\n",
-    "\n",
-    "if __name__ == \"__main__\":\n",
-    "    main()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "cc2147ec-ba09-4d99-bcbb-5663ae8fb5d6",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "013236b5-e173-4f23-ac44-cb7542d9aa09",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3 (ipykernel)",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.13.11"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+import pandas as pd
+import numpy as np
+import tensorflow as tf
+import os
+import cv2
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler
+
+old_model = "house_price_model_v2.h5"
+new_model = "house_price_model_v3.h5"
+csv_path = "cleaned_dataset.csv"
+img_folder = "data/house_images"
+size = 128
+cols = ['bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'lat', 'long']
+
+def load_data():
+    print("--- Loading Data ---")
+    df = pd.read_csv(csv_path)
+    
+    df['path'] = df['id'].apply(lambda x: os.path.join(img_folder, f"image_{x}.jpg"))
+    df = df[df['path'].apply(os.path.exists)]
+    
+    print(f"Images found: {len(df)}")
+    
+    images = []
+    for path in df['path']:
+        img = cv2.imread(path)
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        img = cv2.resize(img, (size, size))
+        images.append(img)
+    
+    x_img = np.array(images) / 255.0
+    
+    sc = MinMaxScaler()
+    x_stats = sc.fit_transform(df[cols].values)
+    
+    y = df['price'].values
+    return x_img, x_stats, y
+
+def run_tuning():
+    x_img, x_stats, y = load_data()
+    
+    xi_train, xi_test, xs_train, xs_test, y_train, y_test = train_test_split(
+        x_img, x_stats, y, test_size=0.2, random_state=42
+    )
+
+    print(f"\n--- Loading {old_model} ---")
+    model = tf.keras.models.load_model(old_model, compile=False)
+
+    opt = tf.keras.optimizers.Adam(learning_rate=0.0001)
+    
+    model.compile(optimizer=opt, loss='mse', metrics=['mae'])
+
+    print("\n--- Fine-Tuning ---")
+    history = model.fit(
+        [xi_train, xs_train], y_train,
+        validation_data=([xi_test, xs_test], y_test),
+        epochs=15,
+        batch_size=32
+    )
+
+    model.save(new_model)
+    print(f"\nSaved: {new_model}")
+
+    final_loss = history.history['val_loss'][-1]
+    print(f"Final Val Loss: {int(final_loss):,}")
+    print(f"RMSE: ${int(np.sqrt(final_loss)):,}")
+
+if __name__ == "__main__":
+    run_tuning()
