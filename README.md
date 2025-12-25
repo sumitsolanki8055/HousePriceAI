@@ -41,5 +41,10 @@ This project uses a **Multi-Input Neural Network**:
 ## 📊 Dataset
 The model was trained on a real estate dataset containing housing features and corresponding images. The data was cleaned and preprocessed in the `notebooks/` directory.
 
+## 🔮 Future Improvements
+* **Deep Learning:** Upgrade from Random Forest to BERT or LSTM for better text understanding.
+* **More Languages:** Add support for predicting difficulty in C++ and Java specific contexts.
+* **User Feedback:** Allow users to vote on difficulty to retrain the model dynamically.
+
 ---
 *Created by Sumit Solanki*
